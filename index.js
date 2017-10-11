@@ -1,1 +1,1 @@
-module.exports = require('./lib/postman');
+module.exports = require('./lib/mass-production');

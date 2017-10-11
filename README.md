@@ -1,4 +1,4 @@
-gulp-postman
+gulp-massProduction
 ==============
 
 gulp plugin for generating multiple articles.
@@ -8,7 +8,7 @@ gulp plugin for generating multiple articles.
 ### from npm
 
 ```
-npm install -D gulp-postman
+npm install -D gulp-massProduction
 ```
 
 ## usage
@@ -31,7 +31,7 @@ gulp.task('html', () => {
     };
 
     gulp.src('pug/*.pug')
-        .pipe(postman({
+        .pipe(massProduction({
             postParams: params,
             template: 'pug/post.pug'
         }))
@@ -47,7 +47,7 @@ Running this task, and generating `htdocs/hoge.html` and `htdocs.moge.html`.
 ```coffeescript
 gulp.task 'html', ->
   gulp.src "ejs/*.ejs"
-    .pipe postman
+    .pipe massProduction
       markdown: "posts/*.md"
       template: "ejs/article.ejs"
     .pipe ejs()
