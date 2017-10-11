@@ -1,4 +1,4 @@
-gulp-massProduction
+gulp-mass-production
 ==============
 
 gulp plugin for generating multiple articles.
@@ -8,7 +8,7 @@ gulp plugin for generating multiple articles.
 ### from npm
 
 ```
-npm install -D gulp-massProduction
+npm install -D gulp-mass-production
 ```
 
 ## usage
