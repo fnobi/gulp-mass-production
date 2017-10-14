@@ -28,8 +28,6 @@
   },
   "devDependencies": {
     "chai": "1.6.*",
-    "grunt": "0.4.*",
-    "grunt-release": "0.13.*",
     "mocha": "1.11.*"
   },
   "bugs": {
