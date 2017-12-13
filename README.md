@@ -90,7 +90,7 @@ p= meta.body
 
 ```
 
-## Post parameters
+## Options
 
 | Variable | Type | Default | Description |
 |----------|------|---------|-------------|
