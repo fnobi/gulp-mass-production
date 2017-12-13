@@ -42,6 +42,7 @@ gulp.task('html', () => {
 
 Running this task, and generating `htdocs/hoge/index.html` and `htdocs/moge/index.html`.
 
+
 ### Multiply ejs template with markdown articles.
 
 ```coffeescript
@@ -65,3 +66,15 @@ tags:
 ---
 body body body body...
 ```
+
+## post parameters
+
+| Variable | Type | Default | Description |
+|:---------|------|---------|-------------|
+| archive   | Object |{}||
+| hrefRule   | Function | `function (slug, meta) { return slug; };` | Customize html output format ( By default create the directory unless '.html')|
+| locals   | Object | null | Locals to compile the Pug with |  
+| markdown   | String | null | |
+| markedOpts   | Object | { breaks: true } |
+| namespace   | String | 'massProduction' | Object name that is used on template File |
+| postParams | Object | null | Data that is used on template File | 
