@@ -93,7 +93,7 @@ p= meta.body
 ## Post parameters
 
 | Variable | Type | Default | Description |
-|:---------|------|---------|-------------|
+|----------|------|---------|-------------|
 | hrefRule   | Function | `function (slug, meta) { return slug; };` | Customize html output format ( By default create the directory unless '.html')|
 | locals   | Object | null | Locals to compile the pug with |  
 | markdown   | String | null | Markdown file that is used on template file |
