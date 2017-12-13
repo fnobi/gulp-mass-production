@@ -10,7 +10,7 @@ gulp plugin for generating multiple articles.
 ```
 npm install -D gulp-mass-production
 ```
-or
+or  
 ```
 yarn add gulp-mass-production
 ```
@@ -95,9 +95,9 @@ p= meta.body
 | Variable | Type | Default | Description |
 |:---------|------|---------|-------------|
 | hrefRule   | Function | `function (slug, meta) { return slug; };` | Customize html output format ( By default create the directory unless '.html')|
-| locals   | Object | null | Locals to compile the Pug with |  
-| markdown   | String | null | Markdown file that is used on template File |
+| locals   | Object | null | Locals to compile the pug with |  
+| markdown   | String | null | Markdown file that is used on template file |
 | markedOpts   | Object | { breaks: true } | [Read here](https://github.com/chjj/marked#options-1) |
-| namespace   | String | 'massProduction' | Object name that is used on template File |
-| postParams | Object | null | Data that is used on template File | 
+| namespace   | String | 'massProduction' | Object name that is used on template file |
+| postParams | Object | null | Data that is used on template file | 
 
