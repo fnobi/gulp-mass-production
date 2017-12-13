@@ -42,6 +42,20 @@ gulp.task('html', () => {
 
 Running this task, and generating `htdocs/hoge/index.html` and `htdocs/moge/index.html`.
 
+```pug/post.pug
+- meta = massProduction.meta
+ 
+h1= meta.title
+p= meta.body
+
+```
+
+```htdocs/hoge/index.html
+<h1>hoge title</h1>
+<p>body body body body...</p>
+
+```
+
 
 ### Multiply ejs template with markdown articles.
 
