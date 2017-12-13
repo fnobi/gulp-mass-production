@@ -93,7 +93,7 @@ p= meta.body
 | hrefRule   | Function | `function (slug, meta) { return slug; };` | Customize html output format ( By default create the directory unless '.html')|
 | locals   | Object | null | Locals to compile the Pug with |  
 | markdown   | String | null | Markdown file that is used on template File |
-| markedOpts   | Object | { breaks: true } | |
+| markedOpts   | Object | { breaks: true } | [Read here](https://github.com/chjj/marked#options-1) |
 | namespace   | String | 'massProduction' | Object name that is used on template File |
 | postParams | Object | null | Data that is used on template File | 
 
