@@ -40,7 +40,7 @@ gulp.task('html', () => {
 });
 ```
 
-Running this task, and generating `htdocs/hoge.html` and `htdocs.moge.html`.
+Running this task, and generating `htdocs/hoge/index.html` and `htdocs/moge/index.html`.
 
 ### Multiply ejs template with markdown articles.
 
