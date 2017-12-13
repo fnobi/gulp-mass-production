@@ -10,7 +10,7 @@ gulp plugin for generating multiple articles.
 ```
 npm install -D gulp-mass-production
 ```
-
+or
 ```
 yarn add gulp-mass-production
 ```
