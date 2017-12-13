@@ -3,7 +3,7 @@ gulp-mass-production
 
 gulp plugin for generating multiple articles.
 
-## install
+## Install
 
 ### from npm
 
@@ -11,7 +11,11 @@ gulp plugin for generating multiple articles.
 npm install -D gulp-mass-production
 ```
 
-## usage
+```
+yarn add gulp-mass-production
+```
+
+## Usage
 
 You can choose format from json (as postParams) or markdown.
 
@@ -86,7 +90,7 @@ p= meta.body
 
 ```
 
-## post parameters
+## Post parameters
 
 | Variable | Type | Default | Description |
 |:---------|------|---------|-------------|
