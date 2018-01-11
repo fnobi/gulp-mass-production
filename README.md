@@ -3,19 +3,25 @@ gulp-mass-production
 
 gulp plugin for generating multiple articles.
 
-## install
+## Install
 
 ### from npm
 
 ```
 npm install -D gulp-mass-production
 ```
+or  
+```
+yarn add gulp-mass-production
+```
 
-## usage
+## Usage
 
-### Multiply pug template with post parameters.
+You can choose format from json (as postParams) or markdown.
 
-```javascript
+### Using Json 
+
+```gulpfile.js
 gulp.task('html', () => {
     const params = {
         hoge: {
@@ -40,28 +46,58 @@ gulp.task('html', () => {
 });
 ```
 
-Running this task, and generating `htdocs/hoge.html` and `htdocs.moge.html`.
+Running this task, and generating `htdocs/hoge/index.html` and `htdocs/moge/index.html`.
 
-### Multiply ejs template with markdown articles.
 
-```coffeescript
-gulp.task 'html', ->
-  gulp.src "ejs/*.ejs"
-    .pipe massProduction
-      markdown: "posts/*.md"
-      template: "ejs/article.ejs"
-    .pipe ejs()
-    .pipe gulp.dest "htdocs"
+### Using Markdown
+
+```gulpfile.js
+gulp.task('html', () => {
+    gulp.src('pug/*.pug')
+        .pipe(massProduction({
+            markdown: "posts/*.md"
+            template: 'pug/post.pug'
+        }))
+        .pipe(pug())
+        .pipe(gulp.dest('htdocs'));
+});
 ```
 
 Write markdown article by [Frontmatter](https://middlemanapp.com/jp/basics/frontmatter/) format.
 
-```markdown
+```posts/hoge.md
 ---
-title: moge title
+title: hoge title
 tags:
   - a
   - b
 ---
 body body body body...
 ```
+
+### Pug template & Output
+```pug/post.pug
+- meta = massProduction.meta
+ 
+h1= meta.title
+p= meta.body
+
+```
+
+```htdocs/hoge/index.html
+<h1>hoge title</h1>
+<p>body body body body...</p>
+
+```
+
+## Options
+
+| Variable | Type | Default | Description |
+|----------|------|---------|-------------|
+| hrefRule   | Function | `function (slug, meta) { return slug; };` | Customize html output format ( By default create the directory unless '.html')|
+| locals   | Object | null | Locals to compile template with |  
+| markdown   | String | null | Markdown file that is used on template file |
+| markedOpts   | Object | { breaks: true } | [Read here](https://github.com/chjj/marked#options-1) |
+| namespace   | String | 'massProduction' | Object name that is used on template file |
+| postParams | Object | null | Data that is used on template file | 
+
